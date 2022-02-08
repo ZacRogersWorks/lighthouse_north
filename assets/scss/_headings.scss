@@ -1,0 +1,45 @@
+.logo {
+    font-family: "HelveticaNeue-CondensedBold", "Helvetica Neue";
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 2rem 0 -0.5rem;
+}
+
+.logo-tag {
+    font-weight: 700;
+}
+
+.section-heading {
+    display: inline-block;
+    position: relative;
+    z-index: $z1;
+}
+
+.section-heading h2 {
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.section-heading::before {
+    content: "";
+    width: 100%;
+    border-bottom: solid 5px white;
+    background-color: $light;
+    position: absolute;
+    bottom: -5%;
+    right: -25%;
+    z-index: $z1n;
+}
+
+.heading-type-2::before {
+    border-bottom: solid 5px black;
+}
+
+.heading-type-3 {
+    color: white;
+}
+
+.heading-type-3::before {
+    border-bottom: solid 5px white;
+}

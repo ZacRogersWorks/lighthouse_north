@@ -1,0 +1,184 @@
+.full-height {
+    min-height: calc(100vh - 144px);
+    height: 100%;
+}
+
+.hero {
+    min-height: 100vh;
+    color: $light;
+    position: relative;
+
+    .container {
+        min-height: 100vh;
+        height: 100%;
+    }
+}
+
+.hero::before {
+    content: "";
+    background: url("/assets/images/marisol-benitez-QvkAQTNj4zk-unsplash.jpg") no-repeat center fixed;
+    background-size: cover;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.75;
+}
+
+.hero::after {
+    content: "";
+    background-color: black;
+    background-size: cover;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 1;
+    z-index: $z1n;
+}
+
+.cta {
+    min-height: 100%;
+    display: block;
+    z-index: $z2;
+}
+
+.cta-title {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 900;
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.cta-desc {
+    width: 75%;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    background-color: $primary;
+    padding: 0.5rem 1.5rem 0rem 1.5rem;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.cta-desc::before {
+    content: "";
+    width: 0;
+    height: 100%;
+    border-left: solid 5px #fff;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: $z1;
+    opacity: 100%;
+}
+
+
+.video-still {
+    aspect-ratio: 16 / 9;
+    max-height: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    margin-left: 0;
+    z-index: $z1;
+    position: relative;
+    border: solid 5px white;
+    border-style: solid none;
+}
+
+.play-btn-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: $z3;
+}
+
+.play-btn {
+    width: 64px;
+    height: 64px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: $z2;
+}
+
+#video-overlay {
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, .7);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: $z3;
+}
+
+.video-container {
+    padding: 0 0;
+    aspect-ratio: 16 / 9;
+    height: auto;
+    min-width: 90%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    iframe {
+        aspect-ratio: 16 / 9;
+        min-height: 100%;
+        min-width: 100%;
+    }
+}
+
+@include media-breakpoint-up(sm) {
+}
+
+@include media-breakpoint-up(md) {
+    .cta-title {
+        font-weight: 900;
+        font-size: 3rem;
+        line-height: 3rem;
+    }
+    .play-btn {
+        width: 124px;
+        height: 124px;
+    }
+    
+}
+
+@include media-breakpoint-up(lg) {
+    .video-col {
+        margin-left: -20%;
+        min-width: 66%;
+    }
+    .video-still {
+        min-width: 100%;
+        max-width: 100%;
+    }
+    .cta-title {
+        font-weight: 900;
+        font-size: 4rem;
+        line-height: 4rem;
+    }
+    .play-btn {
+        width: 140px;
+        height: 140px;
+    }
+}
+
+@include media-breakpoint-up(xl) {
+    .cta-title {
+        font-weight: 900;
+        font-size: 5rem;
+        line-height: 5rem;
+    }
+
+    .cta-desc {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+}

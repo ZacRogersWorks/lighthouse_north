@@ -1,0 +1,128 @@
+.mission {
+background: $primary;
+padding: 5.5rem 0;
+color: white;
+}
+
+.mission-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 0 3rem;
+    max-width: 14rem;
+    min-width: 14rem;
+
+    svg {
+        height: 2rem;
+        color: $medium;
+    }
+    h3 {
+        font-size: 1rem;
+        font-weight: 700;
+        color: black;
+        margin: 1rem 0;
+        background-color: $medium;
+        padding: .5rem;
+        text-align: center;
+    }
+    p {
+        text-align: center;
+    }
+}
+
+.mission-gallery {
+    position: relative;
+    min-height: 400px;
+    max-height: 600px;
+}
+
+.mission-gallery::after {
+    content: '';
+    position: absolute;
+    border-bottom: solid 5px $light;
+    width: 60%;
+    right: 0;
+    bottom: 25%;
+}
+
+.stat-card {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: black;
+    background-color: $medium;
+    font-size: 2rem;
+    font-weight: 700;
+    padding: 2rem 2.5rem 3rem;
+    max-width: 18rem;
+    position: absolute;
+    left: 5%;
+    top: 10%;
+    z-index: $z2;
+}
+
+.stat-card::after {
+    content: '';
+    position: absolute;
+    border-bottom: solid 5px $light;
+    width: 110%;
+    left: 10%;
+    bottom: 15%;
+}
+
+.mission-img-1 {
+    max-width: 400px;
+    max-height: 400px;
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+.mission-img-2 {
+    max-width: 500px;
+    max-height: 500px;
+    position: absolute;
+    z-index: $z1;
+    width: 40%;
+    top: 0;
+    right: 0;
+    border: solid 5px $light;
+}
+
+@include media-breakpoint-down(sm) {
+    .mission-card {
+        margin: 0 0 3rem;
+        min-width: 16rem;
+    }
+}
+
+@include media-breakpoint-down(md) {
+    .mission-card {
+        margin: 0 .5rem 3rem;
+    }
+
+    .mission-gallery {
+        min-width: 325px;
+        min-height: 500px;
+    }
+
+    .mission-gallery::after {
+        right: 5%;
+    }
+
+    .stat-card {
+        font-size: 1.5rem;
+        line-height: 1.5rem;
+        max-width: 14rem;
+        min-height: 8rem;
+        padding: 1rem 1.5rem;
+    }
+
+    .mission-img-1 {
+        max-width: 300px;
+    }
+    .mission-img-2 {
+        max-width: 250px;
+        right: 10%;
+    }
+}

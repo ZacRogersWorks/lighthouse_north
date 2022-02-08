@@ -1,0 +1,40 @@
+.contact {
+    background-color: $primary;
+    padding: 5.5rem 0;
+}
+
+.fb-frame {
+    width: 100%;
+}
+
+input {
+    color: #ffffff;
+    width: 100%;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, .5);
+    border: none;
+    padding: .75rem 1rem .5rem 1rem;
+}
+
+input::placeholder {
+    color: rgba(255, 255, 255, 0.75);
+}
+
+textarea {
+    width: 100%;
+    border: none;
+    border-radius: 8px;
+    padding: .5rem 1rem;
+}
+
+#contact-submit {
+    display: relative;
+    color: $dark;
+    font-weight: 700;
+    text-decoration: none;
+    padding: .5rem 3rem;
+    background-color: $secondary;
+    border-radius: .5rem;
+    border: none;
+    filter: drop-shadow(2px 4px 3px rgba(0, 0, 0, 0.5));
+}

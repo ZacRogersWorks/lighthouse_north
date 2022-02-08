@@ -1,0 +1,41 @@
+.volunteer {
+    background-color: $medium;
+    padding: 5.5rem 0;
+    position: relative;
+    z-index: $z1n;
+}
+
+.volunteer::before {
+    content: "";
+    background-image: url('assets/images/volunteerpic.png');
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top:0;
+    left: 0;
+    opacity: 20%;
+    z-index: $z1n;
+}
+
+.vol-list {
+    max-width: 100%;
+}
+
+.vol-list:nth-child(4) {
+    margin-bottom: 0;
+}
+
+.vol-card {
+    margin-bottom: 1rem;
+    padding: .5rem 2rem;
+    background-color: $primary;
+    border-radius: 8px;
+    color: $light;
+}
+
+@include media-breakpoint-up(lg) {
+    .vol-list {
+        max-width: 60%;
+    }
+}

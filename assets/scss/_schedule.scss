@@ -1,0 +1,46 @@
+.schedule {
+    padding: 5.5rem 0;
+    background-color: $light;
+    position: relative;
+}
+
+.schedule-heading {
+    position: relative;
+    z-index: $z1;
+
+    p {
+        max-width: 24rem;
+    }
+}
+
+.deco-square {
+    aspect-ratio: 1 / 1;
+    min-width: 300px;
+    width: 30%;
+    background-color: $medium;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: $z1;
+}
+
+.schedule-img {
+    width: 100%;
+}
+
+.z-2 {
+    position: relative;
+    z-index: $z2;
+}
+
+.neg-marg {
+    margin-bottom: -8rem;
+}
+
+@include media-breakpoint-down(lg) {
+    .neg-marg {margin-bottom: 0;}
+    .deco-square {
+        top: 25%;
+        right: 0;
+    }
+}

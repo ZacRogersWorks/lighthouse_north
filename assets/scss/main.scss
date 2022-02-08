@@ -1,0 +1,66 @@
+$light: #ffffff;
+$primary: #19381f;
+$secondary: #eee82c;
+$medium: #96c651;
+
+$z1n: -100;
+$z0: -50;
+$z1: 100;
+$z2: 200;
+$z3: 300;
+$z4: 400;
+$z5: 500;
+$z6: 600;
+$z7: 700;
+$z8: 800;
+$z9: 900;
+
+$enable-negative-margins: true;
+
+@import "../../node_modules/bootstrap/scss/bootstrap-reboot.scss";
+@import "../../node_modules/bootstrap/scss/bootstrap-grid.scss";
+@import "../../node_modules/bootstrap/scss/bootstrap-utilities.scss";
+@import "../../node_modules/bootstrap/scss/_variables.scss";
+
+@import 'hero';
+@import 'headings';
+@import 'mission';
+@import 'schedule';
+@import 'volunteer';
+@import 'contact';
+@import 'footer';
+@import 'hover';
+@import 'privacy';
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
+
+html { height:100%; }
+
+body {
+    font-family: 'Lato', sans-serif;;
+    background-color: black;
+    height:100%;
+}
+
+// .donate-button {
+//     display: inline;
+//     color: $dark;
+//     font-weight: 700;
+//     width: 0;
+//     text-decoration: none;
+//     padding: .5rem 3rem;
+//     background-color: $secondary;
+//     border-radius: .5rem;
+//     border: none;
+//     filter: drop-shadow(2px 4px 3px rgba(0, 0, 0, 0.5));
+//     transition: all .2s ease-in-out;
+// }
+
+// .donate-button:hover {
+//     background-color: #b1ac1d;
+//     transform: scale(2);
+// }
+
+.light-text {
+    color: $light;
+}
