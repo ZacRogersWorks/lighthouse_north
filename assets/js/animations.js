@@ -40,7 +40,7 @@ export default function AnimationModule() {
           delay: 1000
         }, '-=1800')
         .add({
-          targets: '.play-btn',
+          targets: '.play-btn-container',
           opacity: ['0%', '100%'],
         }, '-=1900')
       

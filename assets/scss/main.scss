@@ -42,6 +42,13 @@ body {
     height:100%;
 }
 
+a {
+    transition: all .3s ease-in-out;
+}
+a:hover {
+    color: $secondary;
+}
+
 // .donate-button {
 //     display: inline;
 //     color: $dark;

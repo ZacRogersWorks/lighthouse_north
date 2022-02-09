@@ -1,77 +1,113 @@
 .button {
-	display: inline-block;
-	padding: .75rem 1.25rem;
-	border-radius: 8px;
-	color: black;
-    font-weight: 700;
-    text-decoration: none;
-	text-transform: uppercase;
-	font-size: 1rem;
-	letter-spacing: .15rem;
-	transition: all .3s;
-	position: relative;
-	overflow: hidden;
-	z-index: 1;
+  display: inline-block;
+  padding: 0.75rem 1.25rem;
+  border-radius: 8px;
+  color: black;
+  font-weight: 700;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1rem;
+  letter-spacing: 0.15rem;
+  transition: all 0.3s;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
 }
 
 .button::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: $secondary;
-    border-radius: 8px;
-    z-index: -2;
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: $secondary;
+  border-radius: 8px;
+  z-index: -2;
 }
 .button::before {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0%;
-    height: 100%;
-    background-color: darken($secondary, 15%);
-    transition: all .3s;
-    border-radius: 8px;
-    z-index: -1;
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background-color: darken($secondary, 15%);
+  transition: all 0.3s;
+  border-radius: 8px;
+  z-index: -1;
 }
 .button:hover {
-    color: #fff;
-    transform: scale(1.1);
-    &:before {
-        width: 100%;
-    }
+  color: #fff;
+  transform: scale(1.1);
+  &:before {
+    width: 100%;
+  }
 }
 
-.play-btn-container { color: $secondary;}
+.button:active {
+  transform: scale(0.95);
+}
 
-.play-btn-container:hover { 
+.play-btn-container {
+  color: $secondary;
+}
+
+.play-btn-container:hover {
   cursor: pointer;
   transform: scale(1.1);
   color: darken($secondary, 15%);
-  transition: all .3s;
+  transition: all 0.3s;
+}
+
+.play-btn-container:hover,
+.play-btn-container:focus {
+  color: darken($secondary, 15%);
+  transform: translateY(-6px);
 }
 
 .play-btn-container::after {
-    content: '';
-    width: 100px;
-    height: 100px;
-    border-radius: 100%;
-    border: 6px solid $secondary;
-    position: absolute;
-    z-index: $z3;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    animation: ring 1.5s infinite;
-  }
+  content: "";
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+  border: 6px solid $secondary;
+  position: absolute;
+  z-index: $z3;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: ring 1.5s infinite;
+}
 
+.play-btn-container:hover::after,
+.play-btn-container:focus::after {
+  animation: none;
+  display: none;
+}
+
+.play-btn-container:active {
+  transform: scale(0.95);
+}
+
+@keyframes ring {
+  0% {
+    width: 50px;
+    height: 50px;
+    opacity: 1;
+  }
+  100% {
+    width: 200px;
+    height: 200px;
+    opacity: 0;
+  }
+}
+
+@include media-breakpoint-up(md) {
   @keyframes ring {
     0% {
-      width: 50px;
-      height: 50px;
+      width: 100px;
+      height: 100px;
       opacity: 1;
     }
     100% {
@@ -80,35 +116,19 @@
       opacity: 0;
     }
   }
+}
 
-  @include media-breakpoint-up(md) {
-
-    @keyframes ring {
-      0% {
-        width: 100px;
-        height: 100px;
-        opacity: 1;
-      }
-      100% {
-        width: 200px;
-        height: 200px;
-        opacity: 0;
-      }
+@include media-breakpoint-up(lg) {
+  @keyframes ring {
+    0% {
+      width: 100px;
+      height: 100px;
+      opacity: 1;
+    }
+    100% {
+      width: 250px;
+      height: 250px;
+      opacity: 0;
     }
   }
-
-  @include media-breakpoint-up(lg) {
-
-    @keyframes ring {
-      0% {
-        width: 100px;
-        height: 100px;
-        opacity: 1;
-      }
-      100% {
-        width: 250px;
-        height: 250px;
-        opacity: 0;
-      }
-    }
-  }
+}

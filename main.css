@@ -12587,6 +12587,7 @@ progress {
   content: "";
   background-image: url("assets/images/volunteerpic.png");
   background-size: cover;
+  background-position: 50% 0;
   height: 100%;
   width: 100%;
   position: absolute;
@@ -12732,6 +12733,10 @@ a {
   width: 100%;
 }
 
+.button:active {
+  transform: scale(0.95);
+}
+
 .play-btn-container {
   color: #eee82c;
 }
@@ -12741,6 +12746,12 @@ a {
   transform: scale(1.1);
   color: #beb90f;
   transition: all 0.3s;
+}
+
+.play-btn-container:hover,
+.play-btn-container:focus {
+  color: #beb90f;
+  transform: translateY(-6px);
 }
 
 .play-btn-container::after {
@@ -12755,6 +12766,16 @@ a {
   left: 50%;
   transform: translate(-50%, -50%);
   animation: ring 1.5s infinite;
+}
+
+.play-btn-container:hover::after,
+.play-btn-container:focus::after {
+  animation: none;
+  display: none;
+}
+
+.play-btn-container:active {
+  transform: scale(0.95);
 }
 
 @keyframes ring {
@@ -12797,10 +12818,16 @@ a {
     }
   }
 }
-.privacy::before {
+.privacy-header {
+  position: relative;
+  color: white;
+}
+
+.privacy-header::before {
   content: "";
-  background: url("/assets/images/marisol-benitez-QvkAQTNj4zk-unsplash.jpg") no-repeat center fixed;
+  background: url("/assets/images/marisol-benitez-QvkAQTNj4zk-unsplash.jpg") no-repeat fixed;
   background-size: cover;
+  background-position: 0 0;
   position: absolute;
   top: 0px;
   right: 0px;
@@ -12808,6 +12835,18 @@ a {
   left: 0px;
   opacity: 0.75;
   z-index: -50;
+}
+
+.nav-link {
+  text-decoration: none;
+  font-size: 2rem;
+  letter-spacing: 0.15rem;
+  text-transform: uppercase;
+}
+
+.privacy-policy {
+  background-color: white;
+  padding: 5.5rem 0;
 }
 
 html {
@@ -12818,6 +12857,14 @@ body {
   font-family: "Lato", sans-serif;
   background-color: black;
   height: 100%;
+}
+
+a {
+  transition: all 0.3s ease-in-out;
+}
+
+a:hover {
+  color: #eee82c;
 }
 
 .light-text {
