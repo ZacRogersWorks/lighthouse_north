@@ -1,4 +1,4 @@
-import anime from '/node_modules/animejs/lib/anime.es.js';
+import anime from './node_modules/animejs/lib/anime.es.js';
 
 export default function AnimationModule() {
 
@@ -43,6 +43,16 @@ export default function AnimationModule() {
           targets: '.play-btn-container',
           opacity: ['0%', '100%'],
         }, '-=1900')
+
+      // Bouncing Arrow Animation //
+
+      anime({
+        targets: '.down-arrow',
+        duration: 2000,
+        translateY: [-25, 0],
+        autplay: true,
+        loop: true
+      })
       
       // Animations on scroll //
       

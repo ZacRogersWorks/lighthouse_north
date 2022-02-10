@@ -12283,6 +12283,13 @@ progress {
   z-index: 200;
 }
 
+.down-arrow {
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
 #video-overlay {
   display: none;
   width: 100vw;
@@ -12426,7 +12433,7 @@ progress {
   color: black;
   margin: 1rem 0;
   background-color: #96c651;
-  padding: 0.5rem;
+  padding: 0.5rem 1rem;
   text-align: center;
 }
 .mission-card p {
@@ -12607,10 +12614,24 @@ progress {
 
 .vol-card {
   margin-bottom: 1rem;
-  padding: 0.5rem 2rem;
+  padding: 1rem 2rem;
   background-color: #19381f;
   border-radius: 8px;
   color: #ffffff;
+  display: flex;
+  align-items: center;
+}
+.vol-card p {
+  margin-bottom: 0;
+}
+.vol-card svg {
+  min-width: 36px;
+  min-height: 40px;
+}
+
+.vol-card-text h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
 }
 
 @media (min-width: 992px) {

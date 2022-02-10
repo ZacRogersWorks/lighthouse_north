@@ -106,6 +106,13 @@
     z-index: $z2;
 }
 
+.down-arrow {
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
 #video-overlay {
     display: none;
     width: 100vw;

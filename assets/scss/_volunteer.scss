@@ -29,10 +29,26 @@
 
 .vol-card {
     margin-bottom: 1rem;
-    padding: .5rem 2rem;
+    padding: 1rem 2rem;
     background-color: $primary;
     border-radius: 8px;
     color: $light;
+    display: flex;
+    align-items: center;
+
+    p {
+        margin-bottom: 0;
+    }
+
+    svg {
+        min-width: 36px;
+        min-height: 40px;
+    }
+}
+
+.vol-card-text h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
 }
 
 @include media-breakpoint-up(lg) {
