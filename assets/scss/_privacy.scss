@@ -1,9 +1,9 @@
-.privacy-header {
+.subpage-header {
     position: relative;
     color: white;
 }
 
-.privacy-header::before {
+.subpage-header::before {
     content: '';
     background: url("./assets/images/groceries-header-background.jpg") no-repeat fixed;
     background-size: cover;
@@ -24,7 +24,7 @@
     text-transform: uppercase;
 }
 
-.privacy-policy {
+.subpage-content {
     background-color: white;
     padding: 5.5rem 0;
 }

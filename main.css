@@ -12311,7 +12311,6 @@ progress {
 }
 #video-exit svg:hover {
   transform: scale(1.1);
-  color: gray;
   transition: all 0.3s;
   cursor: pointer;
 }
@@ -12382,6 +12381,10 @@ progress {
     line-height: 1.5rem;
   }
 }
+.logo-link {
+  text-decoration: none;
+}
+
 .logo {
   font-family: "HelveticaNeue-CondensedBold", "Helvetica Neue";
   font-weight: 700;
@@ -12858,12 +12861,12 @@ a {
     }
   }
 }
-.privacy-header {
+.subpage-header {
   position: relative;
   color: white;
 }
 
-.privacy-header::before {
+.subpage-header::before {
   content: "";
   background: url("./assets/images/groceries-header-background.jpg") no-repeat fixed;
   background-size: cover;
@@ -12884,7 +12887,7 @@ a {
   text-transform: uppercase;
 }
 
-.privacy-policy {
+.subpage-content {
   background-color: white;
   padding: 5.5rem 0;
 }
