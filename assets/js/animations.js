@@ -12,17 +12,11 @@ export default function AnimationModule() {
       
       onLoadAnimation
         .add({
-          targets: 'header',
-          translateY: [500, 0],
-          opacity: ['0%', '100%'],
-          duration: 1000
-        })
-        .add({
           targets: '#open-video',
           translateX: [-2000, 0],
-          opacity: ['0%', '100%'],
+          opacity: ['100%'],
           duration: 3000,
-        }, '-=1800')
+        }, '-=800')
         .add({
           targets: '.cta-title',
           translateX: [-1000, 0],
@@ -42,7 +36,7 @@ export default function AnimationModule() {
         .add({
           targets: '.play-btn-container',
           opacity: ['0%', '100%'],
-        }, '-=1900')
+        }, '-=2000')
 
       // Bouncing Arrow Animation //
 

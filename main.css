@@ -12229,6 +12229,7 @@ progress {
   font-size: 2.5rem;
   line-height: 2.5rem;
   margin-bottom: 1.5rem;
+  opacity: 0;
 }
 
 .cta-desc {
@@ -12239,6 +12240,7 @@ progress {
   padding: 0.5rem 1.5rem 0rem 1.5rem;
   margin-bottom: 2rem;
   position: relative;
+  opacity: 0;
 }
 
 .cta-desc::before {
@@ -12251,6 +12253,10 @@ progress {
   top: 0;
   z-index: 100;
   opacity: 100%;
+}
+
+#open-video {
+  opacity: 0;
 }
 
 .video-still {
@@ -12271,6 +12277,7 @@ progress {
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 300;
+  opacity: 0;
 }
 
 .play-btn {
