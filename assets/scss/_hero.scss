@@ -7,6 +7,7 @@
     min-height: 100vh;
     color: $light;
     position: relative;
+    background-size: cover;
 
     .container {
         min-height: 100vh;
@@ -24,18 +25,18 @@
     bottom: 0px;
     left: 0px;
     opacity: 0.75;
+    z-index: $z2n;
 }
 
 .hero::after {
     content: "";
-    background-color: black;
-    background-size: cover;
+    background-color: $primary;
     position: absolute;
     top: 0px;
     right: 0px;
     bottom: 0px;
     left: 0px;
-    opacity: 1;
+    opacity: .4;
     z-index: $z1n;
 }
 
@@ -124,6 +125,21 @@
     z-index: $z3;
 }
 
+#video-exit {
+    display: block;
+    padding: 1rem;
+    position: absolute;
+    top: 0;
+    right: .25rem;
+
+    svg:hover {
+        transform: scale(1.1);
+        color: darken(#fff, 50%);
+        transition: all 0.3s;
+        cursor: pointer;
+    }
+}
+
 .video-container {
     padding: 0 0;
     aspect-ratio: 16 / 9;
@@ -154,7 +170,9 @@
         width: 124px;
         height: 124px;
     }
-    
+    #video-exit {
+        right: 1rem;
+    }
 }
 
 @include media-breakpoint-up(lg) {

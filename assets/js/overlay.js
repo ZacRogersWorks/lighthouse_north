@@ -9,13 +9,12 @@ export default function OverlayModule() {
     const vidContainer = document.getElementById('video-container')
 
     let iframe
-
     function createEmbed() {
         const embed = document.createElement('iframe')
         embed.setAttribute('id','vid-embed')
         embed.setAttribute('width','100%')
         embed.setAttribute('height','auto')
-        embed.setAttribute('src','https://www.youtube.com/embed/dB_lWkTAL8o?autoplay=1')
+        embed.setAttribute('src','https://www.youtube.com/embed/aVpJjE8xbG0?autoplay=1')
         embed.setAttribute('title','YouTube video player')
         embed.setAttribute('frameborder','0')
         embed.setAttribute('allow','accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture')
