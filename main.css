@@ -12195,7 +12195,7 @@ progress {
 
 .hero::before {
   content: "";
-  background: url("assets/images/groceries-hero-background.jpg") no-repeat right/auto fixed;
+  background: url("assets/images/groceries-hero-background.jpg") no-repeat bottom/cover fixed;
   position: absolute;
   top: 0px;
   right: 0px;
@@ -12332,7 +12332,7 @@ progress {
 
 @media (min-width: 768px) {
   .hero::before {
-    background-size: cover;
+    background: url("assets/images/groceries-hero-background.jpg") no-repeat center/cover fixed;
   }
 
   .cta-title {
