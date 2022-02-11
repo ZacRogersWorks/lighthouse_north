@@ -12195,7 +12195,7 @@ progress {
 
 .hero::before {
   content: "";
-  background: url("assets/images/groceries-hero-background.jpg") no-repeat center/auto fixed;
+  background: url("assets/images/groceries-hero-background.jpg") no-repeat right/auto fixed;
   position: absolute;
   top: 0px;
   right: 0px;
@@ -12885,8 +12885,9 @@ a {
 
 .nav-link {
   text-decoration: none;
+  font-weight: 700;
   font-size: 2rem;
-  letter-spacing: 0.15rem;
+  letter-spacing: 0.1rem;
   text-transform: uppercase;
 }
 
