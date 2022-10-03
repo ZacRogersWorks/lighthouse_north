@@ -12473,7 +12473,6 @@ progress {
 }
 
 .mission-gallery {
-  position: relative;
   min-height: 400px;
   max-height: 600px;
 }

@@ -1,310 +1,519 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="main.css" />
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="main.css">
-
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-    <link rel="manifest" href="site.webmanifest">
-    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+    <link rel="manifest" href="site.webmanifest" />
+    <link rel="shortcut icon" href="favicon.ico" />
 
     <title>Lighthouse North</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <section class="hero">
-        <div class="container position-relative" id="hero-container">
-            <div class="row">
-                <header>
-                    <a title="Home" class="logo-link" href="index.html">
-                        <h1 class="logo">Lighthouse North</h1>
-                        <span class="logo-tag">A Wenatchee Lighthouse Ministry</span>
-                    </a>
-                </header>
-            </div>
-            <div class="row d-flex align-items-center full-height">
-                <div
-                    class="cta col-12 col-lg-6 my-5 d-flex flex-column align-items-center align-items-lg-start text-center text-lg-start h-100">
-                    <h2 class="cta-title">OUT OF LOVE, ABUNDANCE</h2>
-                    <div class="cta-desc">
-                        <p class="text-start">Sending a truck full of free food and groceries to communities in Okanogan
-                            County several
-                            times a week.
-                            <br><br>
-                            Make a difference in your community today!
-                        </p>
-                    </div>
-                    <div class="donate-container">
-                        <a class="button" id="donate-button" title="Donate now!" href="donate.html" tabindex="1">
-                            DONATE
-                        </a>
-                    </div>
-                </div>
-                <div class="video-col col-12 col-lg-6 mb-5 mb-lg-0" id="open-video" tabindex="2">
-                    <img class="video-still" id="video-link" src="assets/images/happy-children.jpg" alt="">
-                    <div class="play-btn-container">
-                        <svg class="play-btn" xmlns="http://www.w3.org/2000/svg" width="124" height="124"
-                            viewBox="0 0 96 96">
-                            <path id="Icon_awesome-play-circle" data-name="Icon awesome-play-circle"
-                                d="M48.562.563a48,48,0,1,0,48,48A47.992,47.992,0,0,0,48.562.563ZM70.956,53.208,36.892,72.756a4.654,4.654,0,0,1-6.91-4.065V28.433a4.656,4.656,0,0,1,6.91-4.065l34.065,20.71A4.66,4.66,0,0,1,70.956,53.208Z"
-                                fill="currentColor" />
-                        </svg>
-                    </div>
-                </div>
-            </div>
-            <svg class="down-arrow d-none d-lg-block" xmlns="http://www.w3.org/2000/svg" width="39.581" height="49.286"
-                viewBox="0 0 39.581 49.286">
-                <path id="Icon_awesome-angle-double-down" data-name="Icon awesome-angle-double-down"
-                    d="M17.685,28.665.868,11.848a2.955,2.955,0,0,1,0-4.192L3.663,4.862a2.955,2.955,0,0,1,4.192,0l11.92,11.92,11.92-11.92a2.955,2.955,0,0,1,4.192,0l2.819,2.782a2.955,2.955,0,0,1,0,4.192L21.889,28.653A2.959,2.959,0,0,1,17.685,28.665Zm4.2,23.741L38.706,35.59a2.955,2.955,0,0,0,0-4.192L35.911,28.6a2.955,2.955,0,0,0-4.192,0L19.787,40.511,7.867,28.591a2.955,2.955,0,0,0-4.192,0L.868,31.385a2.955,2.955,0,0,0,0,4.192L17.685,52.394A2.959,2.959,0,0,0,21.889,52.406Z"
-                    transform="translate(0.004 -3.99)" fill="#96c651" />
-            </svg>
-
-            <div id="video-overlay">
-                <div class="container-fluid">
-                    <span id="video-exit">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 32 32">
-                            <path id="Icon_ionic-md-close" data-name="Icon ionic-md-close"
-                                d="M39.523,10.723l-3.2-3.2-12.8,12.8-12.8-12.8-3.2,3.2,12.8,12.8-12.8,12.8,3.2,3.2,12.8-12.8,12.8,12.8,3.2-3.2-12.8-12.8Z"
-                                transform="translate(-7.523 -7.523)" fill="#fff" />
-                        </svg>
-                    </span>
-                    <div class="video-container" id="video-container">
-                    </div>
-                </div>
-            </div>
+      <div class="container position-relative" id="hero-container">
+        <div class="row">
+          <header>
+            <a title="Home" class="logo-link" href="index.html">
+              <h1 class="logo">Lighthouse North</h1>
+              <span class="logo-tag">A Wenatchee Lighthouse Ministry</span>
+            </a>
+          </header>
         </div>
+        <div class="row d-flex align-items-center full-height">
+          <div
+            class="cta col-12 col-lg-6 my-5 d-flex flex-column align-items-center align-items-lg-start text-center text-lg-start h-100"
+          >
+            <h2 class="cta-title">OUT OF LOVE, ABUNDANCE</h2>
+            <div class="cta-desc">
+              <p class="text-start">
+                Sending a truck full of free food and groceries to communities
+                in Okanogan County several times a week. <br /><br />
+                Make a difference in your community today!
+              </p>
+            </div>
+            <div class="donate-container">
+              <a
+                class="button"
+                id="donate-button"
+                title="Donate now!"
+                href="donate.html"
+                tabindex="1"
+              >
+                DONATE
+              </a>
+            </div>
+          </div>
+          <div
+            class="video-col col-12 col-lg-6 mb-5 mb-lg-0"
+            id="open-video"
+            tabindex="2"
+          >
+            <img
+              class="video-still"
+              id="video-link"
+              src="assets/images/happy-children.jpg"
+              alt=""
+            />
+            <div class="play-btn-container">
+              <svg
+                class="play-btn"
+                xmlns="http://www.w3.org/2000/svg"
+                width="124"
+                height="124"
+                viewBox="0 0 96 96"
+              >
+                <path
+                  id="Icon_awesome-play-circle"
+                  data-name="Icon awesome-play-circle"
+                  d="M48.562.563a48,48,0,1,0,48,48A47.992,47.992,0,0,0,48.562.563ZM70.956,53.208,36.892,72.756a4.654,4.654,0,0,1-6.91-4.065V28.433a4.656,4.656,0,0,1,6.91-4.065l34.065,20.71A4.66,4.66,0,0,1,70.956,53.208Z"
+                  fill="currentColor"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+        <svg
+          class="down-arrow d-none d-lg-block"
+          xmlns="http://www.w3.org/2000/svg"
+          width="39.581"
+          height="49.286"
+          viewBox="0 0 39.581 49.286"
+        >
+          <path
+            id="Icon_awesome-angle-double-down"
+            data-name="Icon awesome-angle-double-down"
+            d="M17.685,28.665.868,11.848a2.955,2.955,0,0,1,0-4.192L3.663,4.862a2.955,2.955,0,0,1,4.192,0l11.92,11.92,11.92-11.92a2.955,2.955,0,0,1,4.192,0l2.819,2.782a2.955,2.955,0,0,1,0,4.192L21.889,28.653A2.959,2.959,0,0,1,17.685,28.665Zm4.2,23.741L38.706,35.59a2.955,2.955,0,0,0,0-4.192L35.911,28.6a2.955,2.955,0,0,0-4.192,0L19.787,40.511,7.867,28.591a2.955,2.955,0,0,0-4.192,0L.868,31.385a2.955,2.955,0,0,0,0,4.192L17.685,52.394A2.959,2.959,0,0,0,21.889,52.406Z"
+            transform="translate(0.004 -3.99)"
+            fill="#96c651"
+          />
+        </svg>
+
+        <div id="video-overlay">
+          <div class="container-fluid">
+            <span id="video-exit">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 32 32"
+              >
+                <path
+                  id="Icon_ionic-md-close"
+                  data-name="Icon ionic-md-close"
+                  d="M39.523,10.723l-3.2-3.2-12.8,12.8-12.8-12.8-3.2,3.2,12.8,12.8-12.8,12.8,3.2,3.2,12.8-12.8,12.8,12.8,3.2-3.2-12.8-12.8Z"
+                  transform="translate(-7.523 -7.523)"
+                  fill="#fff"
+                />
+              </svg>
+            </span>
+            <div class="video-container" id="video-container"></div>
+          </div>
+        </div>
+      </div>
     </section>
     <section class="mission pb-5">
-        <div class="container mb-5">
-            <div class="section-heading mb-5">
-                <h2>Our Mission</h2>
-            </div>
-            <div class="row">
-                <div class="col-12 col-lg-5">
-                    <div class="container">
-                        <div class="row d-flex mb-5 justify-content-center">
-                            <div class="col-6 mission-card animate">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="51.924" height="46.166"
-                                    viewBox="0 0 51.924 46.166">
-                                    <path id="Icon_awesome-leaf" data-name="Icon awesome-leaf"
-                                        d="M49.241.875A1.4,1.4,0,0,0,46.69.767,15.46,15.46,0,0,1,33.176,8.655H25.963a17.314,17.314,0,0,0-17.31,17.31,17.826,17.826,0,0,0,.135,1.848c5.752-4.12,14.055-7.618,25.829-7.618a1.442,1.442,0,0,1,0,2.885c-22.665,0-32.275,13.893-34.4,19.113a2.889,2.889,0,0,0,5.346,2.191,23.719,23.719,0,0,1,6.482-8.168,17.271,17.271,0,0,0,15.768,6.96c14.154-1.028,24.116-13.722,24.116-29.264A32.784,32.784,0,0,0,49.241.875Z"
-                                        transform="translate(-0.004 0.002)" fill="currentColor" />
-                                </svg>
-                                <h3>Bringing Life</h3>
-                                <p>Healing the community of those experiencing food insecurity - one family at a time.
-                                </p>
-                            </div>
-                            <div class="col-6 mission-card animate">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="34.619" height="46.159"
-                                    viewBox="0 0 34.619 46.159">
-                                    <path id="Icon_awesome-cross" data-name="Icon awesome-cross"
-                                        d="M31.734,11.54H23.08V2.885A2.885,2.885,0,0,0,20.195,0h-5.77A2.885,2.885,0,0,0,11.54,2.885V11.54H2.885A2.885,2.885,0,0,0,0,14.425v5.77A2.885,2.885,0,0,0,2.885,23.08H11.54V43.274a2.885,2.885,0,0,0,2.885,2.885h5.77a2.885,2.885,0,0,0,2.885-2.885V23.08h8.655a2.885,2.885,0,0,0,2.885-2.885v-5.77A2.885,2.885,0,0,0,31.734,11.54Z"
-                                        fill="currentColor" />
-                                </svg>
-
-                                <h3>Love Is The Answer</h3>
-                                <p>We believe that sharing and showing the Gospel must be at the center of everything we
-                                    do.
-                                    <br>
-                                </p>
-                            </div>
-                            <div class="col-6 mission-card animate">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="57.699" height="46.155"
-                                    viewBox="0 0 57.699 46.155">
-                                    <path id="Icon_awesome-hands-helping" data-name="Icon awesome-hands-helping"
-                                        d="M44,17.309h-13.7v5.049a6.491,6.491,0,1,1-12.982,0V11.4l-5.851,3.516a5.758,5.758,0,0,0-2.8,4.94v4.264L1.443,28.281a2.878,2.878,0,0,0-1.055,3.94L7.6,44.716a2.886,2.886,0,0,0,3.94,1.055l9.322-5.382H33.177a5.775,5.775,0,0,0,5.77-5.77H40.39a2.882,2.882,0,0,0,2.885-2.885v-5.77H44A2.159,2.159,0,0,0,46.16,23.8V19.473A2.159,2.159,0,0,0,44,17.309Zm13.316-3.372L50.1,1.442A2.886,2.886,0,0,0,46.16.387L36.838,5.769H27.624a5.813,5.813,0,0,0-3.056.875l-3.02,1.884A2.866,2.866,0,0,0,20.2,10.971V22.358a3.606,3.606,0,1,0,7.212,0V14.424H44a5.052,5.052,0,0,1,5.049,5.049v2.569l7.212-4.165a2.888,2.888,0,0,0,1.055-3.94Z"
-                                        transform="translate(0.002 -0.001)" fill="currentColor" />
-                                </svg>
-
-                                <h3>Local Relationships</h3>
-                                <p>Partnering with Washington State growers and businesses to provide a hand up, instead
-                                    of
-                                    hand outs.
-                                </p>
-                            </div>
-                            <div class="col-6 mission-card animate">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="76.901" height="48.937"
-                                    viewBox="0 0 76.901 48.937">
-                                    <path id="Icon_material-people" data-name="Icon material-people"
-                                        d="M53.933,28.473A10.487,10.487,0,1,0,43.446,17.987,10.443,10.443,0,0,0,53.933,28.473Zm-27.964,0A10.487,10.487,0,1,0,15.482,17.987,10.443,10.443,0,0,0,25.969,28.473Zm0,6.991C17.824,35.464,1.5,39.554,1.5,47.7v8.739H50.437V47.7C50.437,39.554,34.113,35.464,25.969,35.464Zm27.964,0c-1.014,0-2.167.07-3.391.175,4.055,2.936,6.886,6.886,6.886,12.06v8.739H78.4V47.7C78.4,39.554,62.077,35.464,53.933,35.464Z"
-                                        transform="translate(-1.5 -7.5)" fill="currentColor" />
-                                </svg>
-                                <h3>Partner With Us</h3>
-                                <p>We are the mission outreach for your business, home, or church.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="mission-gallery col-12 col-lg-6 animate h-100">
-                    <div class="stat-card animate d-flex justify-content-center">
-                        <span>Up to 200 families fed each week</span>
-                    </div>
-                    <img class="mission-img-1" src="assets/images/food-distribution.jpg" alt="Food Distribution">
-                    <img class="mission-img-2" src="assets/images/child-eating.jpeg" alt="Child Eating">
-                </div>
-            </div>
+      <div class="container mb-5">
+        <div class="section-heading mb-5">
+          <h2>Our Mission</h2>
         </div>
+        <div class="row">
+          <div class="col-12 col-lg-5">
+            <div class="container">
+              <div class="row d-flex mb-5 justify-content-center">
+                <div class="col-6 mission-card animate">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="51.924"
+                    height="46.166"
+                    viewBox="0 0 51.924 46.166"
+                  >
+                    <path
+                      id="Icon_awesome-leaf"
+                      data-name="Icon awesome-leaf"
+                      d="M49.241.875A1.4,1.4,0,0,0,46.69.767,15.46,15.46,0,0,1,33.176,8.655H25.963a17.314,17.314,0,0,0-17.31,17.31,17.826,17.826,0,0,0,.135,1.848c5.752-4.12,14.055-7.618,25.829-7.618a1.442,1.442,0,0,1,0,2.885c-22.665,0-32.275,13.893-34.4,19.113a2.889,2.889,0,0,0,5.346,2.191,23.719,23.719,0,0,1,6.482-8.168,17.271,17.271,0,0,0,15.768,6.96c14.154-1.028,24.116-13.722,24.116-29.264A32.784,32.784,0,0,0,49.241.875Z"
+                      transform="translate(-0.004 0.002)"
+                      fill="currentColor"
+                    />
+                  </svg>
+                  <h3>Bringing Life</h3>
+                  <p>
+                    Healing the community of those experiencing food insecurity
+                    - one family at a time.
+                  </p>
+                </div>
+                <div class="col-6 mission-card animate">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="34.619"
+                    height="46.159"
+                    viewBox="0 0 34.619 46.159"
+                  >
+                    <path
+                      id="Icon_awesome-cross"
+                      data-name="Icon awesome-cross"
+                      d="M31.734,11.54H23.08V2.885A2.885,2.885,0,0,0,20.195,0h-5.77A2.885,2.885,0,0,0,11.54,2.885V11.54H2.885A2.885,2.885,0,0,0,0,14.425v5.77A2.885,2.885,0,0,0,2.885,23.08H11.54V43.274a2.885,2.885,0,0,0,2.885,2.885h5.77a2.885,2.885,0,0,0,2.885-2.885V23.08h8.655a2.885,2.885,0,0,0,2.885-2.885v-5.77A2.885,2.885,0,0,0,31.734,11.54Z"
+                      fill="currentColor"
+                    />
+                  </svg>
+
+                  <h3>Love Is The Answer</h3>
+                  <p>
+                    We believe that sharing and showing the Gospel must be at
+                    the center of everything we do.
+                    <br />
+                  </p>
+                </div>
+                <div class="col-6 mission-card animate">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="57.699"
+                    height="46.155"
+                    viewBox="0 0 57.699 46.155"
+                  >
+                    <path
+                      id="Icon_awesome-hands-helping"
+                      data-name="Icon awesome-hands-helping"
+                      d="M44,17.309h-13.7v5.049a6.491,6.491,0,1,1-12.982,0V11.4l-5.851,3.516a5.758,5.758,0,0,0-2.8,4.94v4.264L1.443,28.281a2.878,2.878,0,0,0-1.055,3.94L7.6,44.716a2.886,2.886,0,0,0,3.94,1.055l9.322-5.382H33.177a5.775,5.775,0,0,0,5.77-5.77H40.39a2.882,2.882,0,0,0,2.885-2.885v-5.77H44A2.159,2.159,0,0,0,46.16,23.8V19.473A2.159,2.159,0,0,0,44,17.309Zm13.316-3.372L50.1,1.442A2.886,2.886,0,0,0,46.16.387L36.838,5.769H27.624a5.813,5.813,0,0,0-3.056.875l-3.02,1.884A2.866,2.866,0,0,0,20.2,10.971V22.358a3.606,3.606,0,1,0,7.212,0V14.424H44a5.052,5.052,0,0,1,5.049,5.049v2.569l7.212-4.165a2.888,2.888,0,0,0,1.055-3.94Z"
+                      transform="translate(0.002 -0.001)"
+                      fill="currentColor"
+                    />
+                  </svg>
+
+                  <h3>Local Relationships</h3>
+                  <p>
+                    Partnering with Washington State growers and businesses to
+                    provide a hand up, instead of hand outs.
+                  </p>
+                </div>
+                <div class="col-6 mission-card animate">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="76.901"
+                    height="48.937"
+                    viewBox="0 0 76.901 48.937"
+                  >
+                    <path
+                      id="Icon_material-people"
+                      data-name="Icon material-people"
+                      d="M53.933,28.473A10.487,10.487,0,1,0,43.446,17.987,10.443,10.443,0,0,0,53.933,28.473Zm-27.964,0A10.487,10.487,0,1,0,15.482,17.987,10.443,10.443,0,0,0,25.969,28.473Zm0,6.991C17.824,35.464,1.5,39.554,1.5,47.7v8.739H50.437V47.7C50.437,39.554,34.113,35.464,25.969,35.464Zm27.964,0c-1.014,0-2.167.07-3.391.175,4.055,2.936,6.886,6.886,6.886,12.06v8.739H78.4V47.7C78.4,39.554,62.077,35.464,53.933,35.464Z"
+                      transform="translate(-1.5 -7.5)"
+                      fill="currentColor"
+                    />
+                  </svg>
+                  <h3>Partner With Us</h3>
+                  <p>
+                    We are the mission outreach for your business, home, or
+                    church.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="mission-gallery col-12 col-lg-6 animate h-100">
+            <div class="stat-card animate d-flex justify-content-center">
+              <span>Up to 200 families fed each week</span>
+            </div>
+            <img
+              class="mission-img-1"
+              src="assets/images/food-distribution.jpg"
+              alt="Food Distribution"
+            />
+            <img
+              class="mission-img-2"
+              src="assets/images/child-eating.jpeg"
+              alt="Child Eating"
+            />
+          </div>
+        </div>
+      </div>
     </section>
     <section class="schedule overflow-hidden">
-        <div class="container mb-5">
-            <div class="deco-square animate"></div>
-            <div class="schedule-heading neg-marg">
-                <div class="section-heading heading-type-2 z-2">
-                    <h2>Schedule</h2>
-                </div>
-                <p class="mt-5 fs-4">Schedule subject to change. Please check back regularly for updates!</p>
-            </div>
-            <div class="row mb-lg-3 z-2 d-flex justify-content-center flex-column-reverse flex-lg-row">
-                <div class="animate col-12 col-lg-5 d-flex align-items-center">
-                    <img class="schedule-img" src="assets/images/grocery-bag.jpg" alt="Bag full of groceries">
-                </div>
-                <div class="animate col-12 col-lg-6 offset-lg-1 mb-5">
-                    <div data-tockify-component="calendar" data-tockify-calendar="lighthousenorthcal"></div>
-                    <script data-cfasync="false" data-tockify-script="embed"
-                        src="https://public.tockify.com/browser/embed.js"></script>
-                </div>
-            </div>
+      <div class="container mb-5">
+        <div class="deco-square animate"></div>
+        <div class="schedule-heading neg-marg">
+          <div class="section-heading heading-type-2 z-2">
+            <h2>Schedule</h2>
+          </div>
+          <p class="mt-5 fs-4">
+            Schedule subject to change. Please check back regularly for updates!
+          </p>
         </div>
+        <div
+          class="row mb-lg-3 z-2 d-flex justify-content-center flex-column-reverse flex-lg-row"
+        >
+          <div class="animate col-12 col-lg-5 d-flex align-items-center">
+            <img
+              class="schedule-img"
+              src="assets/images/grocery-bag.jpg"
+              alt="Bag full of groceries"
+            />
+          </div>
+          <div class="animate col-12 col-lg-6 offset-lg-1 mb-5">
+            <div
+              data-tockify-component="calendar"
+              data-tockify-calendar="lighthousenorthcal"
+            ></div>
+            <script
+              data-cfasync="false"
+              data-tockify-script="embed"
+              src="https://public.tockify.com/browser/embed.js"
+            ></script>
+          </div>
+        </div>
+      </div>
     </section>
     <section class="volunteer">
-        <div class="container">
-            <div class="section-heading heading-type-2">
-                <h2>Current Needs</h2>
-            </div>
-            <p class="mt-4 mb-5 fs-4">There are a variety of ways to help. Here are our current needs:</p>
-            <div class="vol-list">
-                <div class="vol-card animate">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="40.502" height="36.001" viewBox="0 0 40.502 36.001">
-                        <path id="Icon_awesome-hand-holding-heart" data-name="Icon awesome-hand-holding-heart"
-                            d="M19.357,17.613a1.225,1.225,0,0,0,1.793,0l7.657-8.03a5.828,5.828,0,0,0-.394-8.353,5.345,5.345,0,0,0-7.376.541l-.787.823-.78-.816a5.339,5.339,0,0,0-7.376-.548A5.834,5.834,0,0,0,11.7,9.584ZM39.748,23.07a2.327,2.327,0,0,0-3,0l-6.5,5.2a4.476,4.476,0,0,1-2.812.984H19.125a1.125,1.125,0,0,1,0-2.25H24.63a2.341,2.341,0,0,0,2.341-1.87A2.253,2.253,0,0,0,24.75,22.5H13.5a8.275,8.275,0,0,0-5.21,1.849L5.02,27h-3.9A1.128,1.128,0,0,0,0,28.125v6.75A1.128,1.128,0,0,0,1.125,36H26.212a4.505,4.505,0,0,0,2.813-.984l10.631-8.508A2.249,2.249,0,0,0,39.748,23.07Z"
-                            transform="translate(0 0.001)" fill="#fff" />
-                    </svg>
-
-                    <div class="vol-card-text ms-3">
-                        <h3>Helping Hands</h3>
-                        <p>Volunteer at food distribution sites to help unload the truck and moderate distribution.</p>
-                    </div>
-                </div>
-                <div class="vol-card animate">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="40.502" height="36.001" viewBox="0 0 40.502 36.001">
-                        <path id="Icon_awesome-hand-holding-heart" data-name="Icon awesome-hand-holding-heart"
-                            d="M19.357,17.613a1.225,1.225,0,0,0,1.793,0l7.657-8.03a5.828,5.828,0,0,0-.394-8.353,5.345,5.345,0,0,0-7.376.541l-.787.823-.78-.816a5.339,5.339,0,0,0-7.376-.548A5.834,5.834,0,0,0,11.7,9.584ZM39.748,23.07a2.327,2.327,0,0,0-3,0l-6.5,5.2a4.476,4.476,0,0,1-2.812.984H19.125a1.125,1.125,0,0,1,0-2.25H24.63a2.341,2.341,0,0,0,2.341-1.87A2.253,2.253,0,0,0,24.75,22.5H13.5a8.275,8.275,0,0,0-5.21,1.849L5.02,27h-3.9A1.128,1.128,0,0,0,0,28.125v6.75A1.128,1.128,0,0,0,1.125,36H26.212a4.505,4.505,0,0,0,2.813-.984l10.631-8.508A2.249,2.249,0,0,0,39.748,23.07Z"
-                            transform="translate(0 0.001)" fill="#fff" />
-                    </svg>
-
-                    <div class="vol-card-text ms-3">
-                        <h3>Prayer Team</h3>
-                        <p>People of prayer needed to bless families during distribution.</p>
-                    </div>
-                </div>
-                <div class="vol-card animate">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="40.502" height="36.001" viewBox="0 0 40.502 36.001">
-                        <path id="Icon_awesome-hand-holding-heart" data-name="Icon awesome-hand-holding-heart"
-                            d="M19.357,17.613a1.225,1.225,0,0,0,1.793,0l7.657-8.03a5.828,5.828,0,0,0-.394-8.353,5.345,5.345,0,0,0-7.376.541l-.787.823-.78-.816a5.339,5.339,0,0,0-7.376-.548A5.834,5.834,0,0,0,11.7,9.584ZM39.748,23.07a2.327,2.327,0,0,0-3,0l-6.5,5.2a4.476,4.476,0,0,1-2.812.984H19.125a1.125,1.125,0,0,1,0-2.25H24.63a2.341,2.341,0,0,0,2.341-1.87A2.253,2.253,0,0,0,24.75,22.5H13.5a8.275,8.275,0,0,0-5.21,1.849L5.02,27h-3.9A1.128,1.128,0,0,0,0,28.125v6.75A1.128,1.128,0,0,0,1.125,36H26.212a4.505,4.505,0,0,0,2.813-.984l10.631-8.508A2.249,2.249,0,0,0,39.748,23.07Z"
-                            transform="translate(0 0.001)" fill="#fff" />
-                    </svg>
-
-                    <div class="vol-card-text ms-3">
-                        <h3>Adopt A Truck</h3>
-                        <p>Finance a tank of gas for the trip up and back.
-                        </p>
-                    </div>
-                </div>
-                <div class="vol-card animate">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="40.502" height="36.001" viewBox="0 0 40.502 36.001">
-                        <path id="Icon_awesome-hand-holding-heart" data-name="Icon awesome-hand-holding-heart"
-                            d="M19.357,17.613a1.225,1.225,0,0,0,1.793,0l7.657-8.03a5.828,5.828,0,0,0-.394-8.353,5.345,5.345,0,0,0-7.376.541l-.787.823-.78-.816a5.339,5.339,0,0,0-7.376-.548A5.834,5.834,0,0,0,11.7,9.584ZM39.748,23.07a2.327,2.327,0,0,0-3,0l-6.5,5.2a4.476,4.476,0,0,1-2.812.984H19.125a1.125,1.125,0,0,1,0-2.25H24.63a2.341,2.341,0,0,0,2.341-1.87A2.253,2.253,0,0,0,24.75,22.5H13.5a8.275,8.275,0,0,0-5.21,1.849L5.02,27h-3.9A1.128,1.128,0,0,0,0,28.125v6.75A1.128,1.128,0,0,0,1.125,36H26.212a4.505,4.505,0,0,0,2.813-.984l10.631-8.508A2.249,2.249,0,0,0,39.748,23.07Z"
-                            transform="translate(0 0.001)" fill="#fff" />
-                    </svg>
-
-                    <div class="vol-card-text ms-3">
-                        <h3>Food Sourcing</h3>
-                        <p>Either donate food, or connect us with someone who can help meet the growing demand.</p>
-                    </div>
-                </div>
-            </div>
+      <div class="container">
+        <div class="section-heading heading-type-2">
+          <h2>Current Needs</h2>
         </div>
+        <p class="mt-4 mb-5 fs-4">
+          There are a variety of ways to help. Here are our current needs:
+        </p>
+        <div class="vol-list">
+          <div class="vol-card animate">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="40.502"
+              height="36.001"
+              viewBox="0 0 40.502 36.001"
+            >
+              <path
+                id="Icon_awesome-hand-holding-heart"
+                data-name="Icon awesome-hand-holding-heart"
+                d="M19.357,17.613a1.225,1.225,0,0,0,1.793,0l7.657-8.03a5.828,5.828,0,0,0-.394-8.353,5.345,5.345,0,0,0-7.376.541l-.787.823-.78-.816a5.339,5.339,0,0,0-7.376-.548A5.834,5.834,0,0,0,11.7,9.584ZM39.748,23.07a2.327,2.327,0,0,0-3,0l-6.5,5.2a4.476,4.476,0,0,1-2.812.984H19.125a1.125,1.125,0,0,1,0-2.25H24.63a2.341,2.341,0,0,0,2.341-1.87A2.253,2.253,0,0,0,24.75,22.5H13.5a8.275,8.275,0,0,0-5.21,1.849L5.02,27h-3.9A1.128,1.128,0,0,0,0,28.125v6.75A1.128,1.128,0,0,0,1.125,36H26.212a4.505,4.505,0,0,0,2.813-.984l10.631-8.508A2.249,2.249,0,0,0,39.748,23.07Z"
+                transform="translate(0 0.001)"
+                fill="#fff"
+              />
+            </svg>
+
+            <div class="vol-card-text ms-3">
+              <h3>Helping Hands</h3>
+              <p>
+                Volunteer at food distribution sites to help unload the truck
+                and moderate distribution.
+              </p>
+            </div>
+          </div>
+          <div class="vol-card animate">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="40.502"
+              height="36.001"
+              viewBox="0 0 40.502 36.001"
+            >
+              <path
+                id="Icon_awesome-hand-holding-heart"
+                data-name="Icon awesome-hand-holding-heart"
+                d="M19.357,17.613a1.225,1.225,0,0,0,1.793,0l7.657-8.03a5.828,5.828,0,0,0-.394-8.353,5.345,5.345,0,0,0-7.376.541l-.787.823-.78-.816a5.339,5.339,0,0,0-7.376-.548A5.834,5.834,0,0,0,11.7,9.584ZM39.748,23.07a2.327,2.327,0,0,0-3,0l-6.5,5.2a4.476,4.476,0,0,1-2.812.984H19.125a1.125,1.125,0,0,1,0-2.25H24.63a2.341,2.341,0,0,0,2.341-1.87A2.253,2.253,0,0,0,24.75,22.5H13.5a8.275,8.275,0,0,0-5.21,1.849L5.02,27h-3.9A1.128,1.128,0,0,0,0,28.125v6.75A1.128,1.128,0,0,0,1.125,36H26.212a4.505,4.505,0,0,0,2.813-.984l10.631-8.508A2.249,2.249,0,0,0,39.748,23.07Z"
+                transform="translate(0 0.001)"
+                fill="#fff"
+              />
+            </svg>
+
+            <div class="vol-card-text ms-3">
+              <h3>Prayer Team</h3>
+              <p>
+                People of prayer needed to bless families during distribution.
+              </p>
+            </div>
+          </div>
+          <div class="vol-card animate">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="40.502"
+              height="36.001"
+              viewBox="0 0 40.502 36.001"
+            >
+              <path
+                id="Icon_awesome-hand-holding-heart"
+                data-name="Icon awesome-hand-holding-heart"
+                d="M19.357,17.613a1.225,1.225,0,0,0,1.793,0l7.657-8.03a5.828,5.828,0,0,0-.394-8.353,5.345,5.345,0,0,0-7.376.541l-.787.823-.78-.816a5.339,5.339,0,0,0-7.376-.548A5.834,5.834,0,0,0,11.7,9.584ZM39.748,23.07a2.327,2.327,0,0,0-3,0l-6.5,5.2a4.476,4.476,0,0,1-2.812.984H19.125a1.125,1.125,0,0,1,0-2.25H24.63a2.341,2.341,0,0,0,2.341-1.87A2.253,2.253,0,0,0,24.75,22.5H13.5a8.275,8.275,0,0,0-5.21,1.849L5.02,27h-3.9A1.128,1.128,0,0,0,0,28.125v6.75A1.128,1.128,0,0,0,1.125,36H26.212a4.505,4.505,0,0,0,2.813-.984l10.631-8.508A2.249,2.249,0,0,0,39.748,23.07Z"
+                transform="translate(0 0.001)"
+                fill="#fff"
+              />
+            </svg>
+
+            <div class="vol-card-text ms-3">
+              <h3>Adopt A Truck</h3>
+              <p>Finance a tank of gas for the trip up and back.</p>
+            </div>
+          </div>
+          <div class="vol-card animate">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="40.502"
+              height="36.001"
+              viewBox="0 0 40.502 36.001"
+            >
+              <path
+                id="Icon_awesome-hand-holding-heart"
+                data-name="Icon awesome-hand-holding-heart"
+                d="M19.357,17.613a1.225,1.225,0,0,0,1.793,0l7.657-8.03a5.828,5.828,0,0,0-.394-8.353,5.345,5.345,0,0,0-7.376.541l-.787.823-.78-.816a5.339,5.339,0,0,0-7.376-.548A5.834,5.834,0,0,0,11.7,9.584ZM39.748,23.07a2.327,2.327,0,0,0-3,0l-6.5,5.2a4.476,4.476,0,0,1-2.812.984H19.125a1.125,1.125,0,0,1,0-2.25H24.63a2.341,2.341,0,0,0,2.341-1.87A2.253,2.253,0,0,0,24.75,22.5H13.5a8.275,8.275,0,0,0-5.21,1.849L5.02,27h-3.9A1.128,1.128,0,0,0,0,28.125v6.75A1.128,1.128,0,0,0,1.125,36H26.212a4.505,4.505,0,0,0,2.813-.984l10.631-8.508A2.249,2.249,0,0,0,39.748,23.07Z"
+                transform="translate(0 0.001)"
+                fill="#fff"
+              />
+            </svg>
+
+            <div class="vol-card-text ms-3">
+              <h3>Food Sourcing</h3>
+              <p>
+                Either donate food, or connect us with someone who can help meet
+                the growing demand.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
     <section class="contact overflow-hidden">
-        <div class="container">
-            <div class="row">
-                <div class="col-12 col-xl-4 mb-5 mb-lg-0">
-                    <div class="section-heading heading-type-3 mb-5">
-                        <h2>Connect</h2>
-                    </div>
-                    <div class="fb-frame d-flex justify-content-center animate">
-                        <iframe tabindex="-1"
-                            src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FLighthouse-North-105166702096130&tabs=timeline&width=350&height=400&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId"
-                            width="350" height="400" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
-                            allowfullscreen="true"
-                            allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
-                    </div>
-                </div>
-                <div class="col-12 col-xl-8">
-                    <div class="section-heading heading-type-3 mb-5">
-                        <h2>Contact</h2>
-                    </div>
-                    <p class="mb-4 light-text">Contact us if you have any questions or would like to know more about
-                        volunteer opportunities:</p>
-                    <form class="animate" id="fs-frm" name="contact-form" accept-charset="utf-8"
-                        action="https://formspree.io/f/mbjwdzro" method="post">
-                        <fieldset class="d-flex flex-column" id="fs-frm-inputs">
-                            <input class="mb-3" type="text" name="name" id="full-name" placeholder="Name" required="">
-                            <input class="mb-3" type="email" name="_replyto" id="email-address"
-                                placeholder="Email Address" required="">
-                            <input class="mb-3" type="telephone" name="telephone" id="telephone" placeholder="Phone #"
-                                required="">
-                            <textarea class="mb-3" rows="6" name="complaint" id="complaint" placeholder="Message..."
-                                required=""></textarea>
-                            <input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission">
-                            <button class="button align-self-end" id="contact-submit" type="submit"
-                                value="SUBMIT">Submit</button>
-                        </fieldset>
-
-                    </form>
-                </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-xl-4 mb-5 mb-lg-0">
+            <div class="section-heading heading-type-3 mb-5">
+              <h2>Connect</h2>
             </div>
+            <div class="fb-frame d-flex justify-content-center animate">
+              <iframe
+                tabindex="-1"
+                src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FLighthouse-North-105166702096130&tabs=timeline&width=350&height=400&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId"
+                width="350"
+                height="400"
+                style="border: none; overflow: hidden"
+                scrolling="no"
+                frameborder="0"
+                allowfullscreen="true"
+                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+              ></iframe>
+            </div>
+          </div>
+          <div class="col-12 col-xl-8">
+            <div class="section-heading heading-type-3 mb-5">
+              <h2>Contact</h2>
+            </div>
+            <p class="mb-4 light-text">
+              Contact us if you have any questions or would like to know more
+              about volunteer opportunities:
+            </p>
+            <form
+              class="animate"
+              id="fs-frm"
+              name="contact-form"
+              accept-charset="utf-8"
+              action="https://formspree.io/f/mbjwdzro"
+              method="post"
+            >
+              <fieldset class="d-flex flex-column" id="fs-frm-inputs">
+                <input
+                  class="mb-3"
+                  type="text"
+                  name="name"
+                  id="full-name"
+                  placeholder="Name"
+                  required=""
+                />
+                <input
+                  class="mb-3"
+                  type="email"
+                  name="_replyto"
+                  id="email-address"
+                  placeholder="Email Address"
+                  required=""
+                />
+                <input
+                  class="mb-3"
+                  type="telephone"
+                  name="telephone"
+                  id="telephone"
+                  placeholder="Phone #"
+                  required=""
+                />
+                <textarea
+                  class="mb-3"
+                  rows="6"
+                  name="complaint"
+                  id="complaint"
+                  placeholder="Message..."
+                  required=""
+                ></textarea>
+                <input
+                  type="hidden"
+                  name="_subject"
+                  id="email-subject"
+                  value="Contact Form Submission"
+                />
+                <button
+                  class="button align-self-end"
+                  id="contact-submit"
+                  type="submit"
+                  value="SUBMIT"
+                >
+                  Submit
+                </button>
+              </fieldset>
+            </form>
+          </div>
         </div>
+      </div>
     </section>
     <footer class="">
-        <div class="container">
-            <div class="d-flex justify-content-center justify-content-lg-start">
-                <span class="footer-logo mb-3">LIGHTHOUSE NORTH</span>
-            </div>
-            <div class="row d-flex flex-column-reverse flex-lg-row justify-content-between">
-                <div class="footer-main col-12 col-md-6 align-self-lg-end d-flex justify-content-between">
-
-                    <div class="footer-links d-flex flex-column">
-                        <span>Copyright <a href="">Wenatchee Lighthouse</a> 2022</span>
-                        <span><a title="Privacy Policy" href="privacy-policy.html">Privacy Policy</a></span>
-                        <span>Website by <a title="Zac Rogers Design" href="https://www.zacrogers.works">Zac
-                                Rogers</a></span>
-                    </div>
-                </div>
-                <div
-                    class="footer-contact col-12 col-md-6 mt-5 mb-5 mb-lg-0 text-lg-end d-flex flex-column justify-content-between">
-                    <span class="footer-address mb-3">410 S Columbia St
-                        <br>
-                        Wenatchee, WA 9880
-                    </span>
-                    <span class="footer-email">Phone: (509) 888-4864
-                        <br>
-                        <a title="Wenatchee Lighthouse Christian Ministires" href="https://wenatcheelighthouse.org/"
-                            target="_blank">WenatcheeLighthouse.org</a>
-                        <br>
-                        Email: shawn@wenatcheelighthouse.org
-                    </span>
-                </div>
-            </div>
+      <div class="container">
+        <div class="d-flex justify-content-center justify-content-lg-start">
+          <span class="footer-logo mb-3">LIGHTHOUSE NORTH</span>
         </div>
+        <div
+          class="row d-flex flex-column-reverse flex-lg-row justify-content-between"
+        >
+          <div
+            class="footer-main col-12 col-md-6 align-self-lg-end d-flex justify-content-between"
+          >
+            <div class="footer-links d-flex flex-column">
+              <span>Copyright <a href="">Wenatchee Lighthouse</a> 2022</span>
+              <span
+                ><a title="Privacy Policy" href="privacy-policy.html"
+                  >Privacy Policy</a
+                ></span
+              >
+              <span
+                >Website by
+                <a title="Zac Rogers Design" href="https://www.zacrogers.works"
+                  >Zac Rogers</a
+                ></span
+              >
+            </div>
+          </div>
+          <div
+            class="footer-contact col-12 col-md-6 mt-5 mb-5 mb-lg-0 text-lg-end d-flex flex-column justify-content-between"
+          >
+            <span class="footer-address mb-3"
+              >410 S Columbia St
+              <br />
+              Wenatchee, WA 98801
+            </span>
+            <span class="footer-email"
+              >Phone: (509) 888-4864
+              <br />
+              <a
+                title="Wenatchee Lighthouse Christian Ministires"
+                href="https://wenatcheelighthouse.org/"
+                target="_blank"
+                >WenatcheeLighthouse.org</a
+              >
+              <br />
+              Email: shawn@wenatcheelighthouse.org
+            </span>
+          </div>
+        </div>
+      </div>
     </footer>
     <script src="./assets/js/anime.min.js"></script>
     <script type="module" src="./assets/js/index.js"></script>
-</body>
-
+  </body>
 </html>
