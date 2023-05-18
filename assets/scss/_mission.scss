@@ -33,6 +33,7 @@ color: white;
 .mission-gallery {
     min-height: 400px;
     max-height: 600px;
+    position: relative;
 }
 
 .mission-gallery::after {
